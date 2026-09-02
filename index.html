@@ -1,0 +1,2197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>자투립</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: "#00C68E",
+            brandDark: "#00A676",
+            brandLight: "#E5F9F4",
+            bgLayer: "#F8F9FA",
+            textMain: "#1A1A1A",
+            textSub: "#8E8E93",
+            heartYellow: "#FFCC00",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      background: #e5e7eb;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Apple SD Gothic Neo",
+        Pretendard,
+        sans-serif;
+    }
+
+    .device {
+      width: 100%;
+      max-width: 390px;
+      height: 820px;
+      background: white;
+      position: relative;
+      overflow: hidden;
+      border-radius: 32px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    }
+
+    .view {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      transition: transform 0.35s ease;
+    }
+
+    .view-active {
+      transform: translateX(0);
+    }
+
+    .view-hidden-right {
+      transform: translateX(100%);
+    }
+
+    .view-hidden-left {
+      transform: translateX(-100%);
+    }
+
+    .card-stack {
+      position: relative;
+      width: 100%;
+      height: 470px;
+      perspective: 1000px;
+    }
+
+    .swipe-card {
+      position: absolute;
+      inset: 0;
+
+      border-radius: 24px;
+
+      background-size: cover;
+      background-position: center;
+
+      box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.14);
+
+      transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      padding: 24px;
+    }
+
+    .swipe-card::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.82),
+          rgba(0, 0, 0, 0.05) 60%
+        );
+
+      z-index: 1;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+    }
+
+    .swipe-left {
+      transform:
+        translateX(-130%)
+        rotate(-15deg) !important;
+
+      opacity: 0;
+    }
+
+    .swipe-right {
+      transform:
+        translateX(130%)
+        rotate(15deg) !important;
+
+      opacity: 0;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 30px;
+      bottom: 30px;
+      left: 15px;
+
+      border-left:
+        2px dashed #e5e7eb;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      scrollbar-width: none;
+    }
+
+    /*
+     * 자투리 시간 / 위치 선택 버튼
+     */
+    .chip {
+      border: 1px solid #e5e7eb;
+      background: white;
+      color: #1a1a1a;
+
+      border-radius: 14px;
+      padding: 12px 0;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease;
+    }
+
+    .chip-selected {
+      background: #e5f9f4;
+      border-color: #00c68e;
+      color: #00a676;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="device">
+
+  <!-- ==================================================
+       STEP 1
+       자투리 시간과 위치 입력
+  =================================================== -->
+
+  <section
+    id="plan-view"
+    class="view view-active bg-bgLayer"
+  >
+
+    <header
+      class="px-6 pt-10 pb-3"
+    >
+
+      <div
+        id="preference-summary"
+        class="
+          inline-block
+          bg-brandLight
+          text-brandDark
+          text-xs
+          font-bold
+          px-3
+          py-1
+          rounded-full
+          mb-3
+        "
+      >
+        1단계 · 비는 시간
+      </div>
+
+      <h1
+        class="text-[22px] font-bold text-textMain"
+      >
+        시간이 얼마나<br />
+        비어 있나요?
+      </h1>
+
+      <p
+        class="text-[13px] text-textSub mt-1"
+      >
+        다음 일정 도착 15분 전까지 돌아올 수 있게 짜드려요
+      </p>
+
+    </header>
+
+
+    <main
+      class="
+        px-6
+        flex-1
+        overflow-y-auto
+        no-scrollbar
+        pb-4
+      "
+    >
+
+      <!-- 자투리 시간 -->
+      <div class="mt-4">
+
+        <div
+          class="text-[13px] font-bold text-textMain mb-2"
+        >
+          자투리 시간
+        </div>
+
+        <div
+          id="minutes-options"
+          class="grid grid-cols-3 gap-2"
+        >
+        </div>
+
+      </div>
+
+
+      <!-- 출발 위치 -->
+      <div class="mt-6">
+
+        <div
+          class="flex items-center justify-between mb-2"
+        >
+
+          <div
+            class="text-[13px] font-bold text-textMain"
+          >
+            지금 있는 곳
+          </div>
+
+          <button
+            id="geolocation-button"
+            class="text-xs font-bold text-brandDark"
+          >
+            현재 위치 사용
+          </button>
+
+        </div>
+
+        <select
+          id="start-select"
+          class="
+            w-full
+            bg-white
+            border border-gray-200
+            rounded-2xl
+            px-4 py-3
+            text-sm
+            font-bold
+            text-textMain
+          "
+        >
+        </select>
+
+        <p
+          id="start-note"
+          class="text-xs text-textSub mt-2"
+        >
+        </p>
+
+      </div>
+
+
+      <!-- 다음 일정 장소 -->
+      <div class="mt-6">
+
+        <div
+          class="text-[13px] font-bold text-textMain mb-2"
+        >
+          다음 일정 장소
+        </div>
+
+        <select
+          id="end-select"
+          class="
+            w-full
+            bg-white
+            border border-gray-200
+            rounded-2xl
+            px-4 py-3
+            text-sm
+            font-bold
+            text-textMain
+          "
+        >
+        </select>
+
+        <p
+          class="text-xs text-textSub mt-2"
+        >
+          정하지 않으면 출발한 자리로 돌아오는 코스를 만들어요
+        </p>
+
+      </div>
+
+
+      <!-- 출발 시각 -->
+      <div class="mt-6 mb-2">
+
+        <div
+          class="text-[13px] font-bold text-textMain mb-2"
+        >
+          출발 시각
+        </div>
+
+        <input
+          id="depart-input"
+          type="time"
+          class="
+            w-full
+            bg-white
+            border border-gray-200
+            rounded-2xl
+            px-4 py-3
+            text-sm
+            font-bold
+            text-textMain
+          "
+        />
+
+      </div>
+
+    </main>
+
+
+    <footer
+      class="
+        px-6
+        pb-8
+        pt-4
+        border-t
+        border-gray-100
+        bg-white
+      "
+    >
+
+      <button
+        id="course-button"
+        class="
+          w-full
+          bg-brand
+          text-white
+          py-4
+          rounded-xl
+          font-bold
+        "
+      >
+        취향 고르러 가기
+      </button>
+
+    </footer>
+
+  </section>
+
+
+  <!-- ==================================================
+       STEP 2
+       취향 스와이프
+  =================================================== -->
+
+  <section
+    id="swipe-view"
+    class="view view-hidden-right bg-bgLayer"
+  >
+
+    <header
+      class="px-6 pt-10 pb-4"
+    >
+      <div
+        class="text-xs font-bold text-brand mb-2"
+      >
+        자투립
+      </div>
+
+      <h1
+        class="text-[22px] font-bold text-textMain"
+      >
+        어떤 시간이 끌리시나요?
+      </h1>
+
+      <p
+        class="text-[13px] text-textSub mt-1"
+      >
+        마음에 들면 O, 아니면 X
+      </p>
+    </header>
+
+
+    <main
+      class="px-6 flex-1 flex flex-col"
+    >
+
+      <!-- 진행상황 -->
+      <div
+        class="flex justify-between items-center mb-4"
+      >
+
+        <span
+          id="card-progress"
+          class="text-xs text-gray-400"
+        >
+          카드를 불러오는 중...
+        </span>
+
+      </div>
+
+
+      <!-- 카드 -->
+      <div
+        id="card-container"
+        class="card-stack"
+      >
+      </div>
+
+
+      <!-- O / X 버튼 -->
+      <div
+        class="flex gap-4 mt-6 mb-8"
+      >
+
+        <button
+          id="dislike-button"
+          class="
+            flex-1
+            bg-white
+            border border-gray-200
+            py-4
+            rounded-2xl
+            font-bold
+            text-gray-600
+            shadow-sm
+          "
+        >
+          ✕ 별로예요
+        </button>
+
+
+        <button
+          id="like-button"
+          class="
+            flex-1
+            bg-heartYellow
+            py-4
+            rounded-2xl
+            font-bold
+            text-gray-900
+            shadow-sm
+          "
+        >
+          ♥ 좋아요
+        </button>
+
+      </div>
+
+    </main>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       STEP 3
+       추천 결과 타임라인
+  =================================================== -->
+
+  <section
+    id="result-view"
+    class="view view-hidden-right"
+  >
+
+    <header
+      class="px-6 pt-10 pb-3"
+    >
+
+      <div
+        id="result-badge"
+        class="
+          inline-block
+          bg-brandLight
+          text-brandDark
+          text-xs
+          font-bold
+          px-3
+          py-1
+          rounded-full
+          mb-3
+        "
+      >
+        ✨ 추천 완료
+      </div>
+
+      <h1
+        class="text-[22px] font-bold text-textMain"
+      >
+        지금 시간에 딱 맞는<br />
+        자투립 코스예요
+      </h1>
+
+      <p
+        id="course-summary"
+        class="text-[13px] text-textSub mt-2"
+      >
+      </p>
+
+    </header>
+
+
+    <main
+      class="
+        px-6
+        flex-1
+        overflow-y-auto
+        no-scrollbar
+        pb-10
+      "
+    >
+
+      <div
+        id="timeline"
+        class="relative mt-6"
+      >
+      </div>
+
+    </main>
+
+
+    <footer
+      class="
+        px-6
+        pb-8
+        pt-4
+        border-t
+        border-gray-100
+      "
+    >
+
+      <div class="flex gap-3">
+
+        <button
+          id="back-button"
+          class="
+            flex-1
+            bg-white
+            border border-gray-200
+            text-gray-700
+            py-4
+            rounded-xl
+            font-bold
+          "
+        >
+          조건 바꾸기
+        </button>
+
+        <button
+          id="restart-button"
+          class="
+            flex-1
+            bg-brand
+            text-white
+            py-4
+            rounded-xl
+            font-bold
+          "
+        >
+          다시 선택하기
+        </button>
+
+      </div>
+
+    </footer>
+
+  </section>
+
+</div>
+
+
+
+<script>
+
+  // =====================================================
+  // 상수
+  // =====================================================
+
+  /*
+   * 다음 일정 도착 전 여유시간
+   *
+   * 서버 규칙과 같은 값이다.
+   * 화면 안내 문구에만 쓴다.
+   */
+  const BUFFER_MINUTES = 15;
+
+
+  /*
+   * 자투리 시간 선택지
+   *
+   * 60분은 뺐다.
+   * 체류시간 최소값이 60분이라
+   * 이동시간과 여유시간 15분을 더하면
+   * 어떤 코스도 만들어지지 않는다.
+   *
+   * 체류시간을 줄이는 기능이 생기면 다시 넣는다.
+   */
+  const MINUTE_OPTIONS = [
+    90,
+    120,
+    180,
+  ];
+
+
+  /*
+   * 위치 선택지
+   *
+   * MVP라 지도를 붙이지 않고
+   * 서울 주요 지점만 둔다.
+   */
+  const PLACE_PRESETS = [
+    {
+      name: "서울시청",
+      lat: 37.5663,
+      lng: 126.9779,
+    },
+    {
+      name: "서울역",
+      lat: 37.5547,
+      lng: 126.9707,
+    },
+    {
+      name: "강남역",
+      lat: 37.4979,
+      lng: 127.0276,
+    },
+    {
+      name: "홍대입구역",
+      lat: 37.5572,
+      lng: 126.9245,
+    },
+    {
+      name: "여의도역",
+      lat: 37.5215,
+      lng: 126.9243,
+    },
+    {
+      name: "성수역",
+      lat: 37.5445,
+      lng: 127.0557,
+    },
+    {
+      name: "잠실역",
+      lat: 37.5133,
+      lng: 127.1000,
+    },
+  ];
+
+
+
+  // =====================================================
+  // 상태
+  // =====================================================
+
+  const cardContainer =
+    document.getElementById(
+      "card-container"
+    );
+
+  const progress =
+    document.getElementById(
+      "card-progress"
+    );
+
+  const likeButton =
+    document.getElementById(
+      "like-button"
+    );
+
+  const dislikeButton =
+    document.getElementById(
+      "dislike-button"
+    );
+
+  const minutesOptions =
+    document.getElementById(
+      "minutes-options"
+    );
+
+  const startSelect =
+    document.getElementById(
+      "start-select"
+    );
+
+  const endSelect =
+    document.getElementById(
+      "end-select"
+    );
+
+  const departInput =
+    document.getElementById(
+      "depart-input"
+    );
+
+  const startNote =
+    document.getElementById(
+      "start-note"
+    );
+
+  const courseButton =
+    document.getElementById(
+      "course-button"
+    );
+
+  const timeline =
+    document.getElementById(
+      "timeline"
+    );
+
+
+  let cardElements = [];
+
+  let swipeResults = [];
+
+  let totalCards = 0;
+
+  let userPreferences = null;
+
+
+  let selectedMinutes = 120;
+
+  /*
+   * 브라우저에서 받아온 실제 위치
+   *
+   * 있으면 프리셋 대신 이 좌표를 쓴다.
+   */
+  let currentLocation = null;
+
+
+
+  // =====================================================
+  // 카드 API 호출
+  // =====================================================
+
+  async function loadSwipeCards() {
+
+    cardContainer.innerHTML = `
+      <div
+        class="
+          w-full h-full
+          flex items-center
+          justify-center
+          text-gray-400
+        "
+      >
+        취향 카드를 불러오는 중...
+      </div>
+    `;
+
+
+    try {
+
+      const response =
+        await fetch(
+          "/api/swipe-cards"
+        );
+
+
+      if (!response.ok) {
+
+        throw new Error(
+          `HTTP ${response.status}`
+        );
+
+      }
+
+
+      const data =
+        await response.json();
+
+
+      renderSwipeCards(
+        data.cards
+      );
+
+
+    } catch (error) {
+
+      console.error(
+        "카드 로드 오류:",
+        error
+      );
+
+
+      cardContainer.innerHTML = `
+        <div
+          class="
+            w-full h-full
+            flex items-center
+            justify-center
+            text-red-500
+          "
+        >
+          카드를 불러오지 못했습니다.
+        </div>
+      `;
+
+    }
+  }
+
+
+
+  // =====================================================
+  // 카드 화면 생성
+  // =====================================================
+
+  function renderSwipeCards(cards) {
+
+    cardContainer.innerHTML = "";
+
+    cardElements = [];
+
+    swipeResults = [];
+
+    totalCards =
+      cards.length;
+
+
+    [...cards]
+      .reverse()
+      .forEach(
+        (data, index) => {
+
+          const depth =
+            cards.length -
+            1 -
+            index;
+
+
+          const card =
+            document.createElement(
+              "div"
+            );
+
+
+          card.className =
+            "swipe-card";
+
+
+          card.dataset.id =
+            data.id;
+
+
+          /*
+           * TourAPI 이미지
+           */
+          if (data.image) {
+
+            /*
+             * TourAPI 일부 이미지가
+             * http이므로 https 페이지에서
+             * 차단될 수 있다.
+             *
+             * 로컬 테스트에서는 그대로 사용.
+             */
+
+            card.style.backgroundImage =
+              `url("${data.image}")`;
+
+          } else {
+
+            card.style.background =
+              "linear-gradient(135deg, #94a3b8, #475569)";
+
+          }
+
+
+          card.style.zIndex =
+            index + 1;
+
+
+          card.style.transform =
+            `scale(${1 - depth * 0.03})
+             translateY(${depth * 8}px)`;
+
+
+          card.innerHTML = `
+            <div class="card-content">
+
+              <span
+                class="
+                  inline-block
+                  bg-brand
+                  px-3
+                  py-1
+                  rounded-full
+                  text-xs
+                  font-bold
+                  mb-3
+                "
+              >
+                ${escapeHtml(data.category)}
+              </span>
+
+
+              <h2
+                class="
+                  text-[22px]
+                  font-bold
+                  leading-snug
+                  mb-3
+                "
+              >
+                ${escapeHtml(data.sceneText)}
+              </h2>
+
+
+              <div
+                class="
+                  text-sm
+                  opacity-90
+                "
+              >
+                📍 ${escapeHtml(data.title)}
+              </div>
+
+            </div>
+          `;
+
+
+          cardContainer.appendChild(
+            card
+          );
+
+
+          /*
+           * 실제 스와이프 순서
+           */
+          cardElements.unshift(
+            card
+          );
+
+        }
+      );
+
+
+    updateProgress();
+  }
+
+
+
+  // =====================================================
+  // X / O 처리
+  // =====================================================
+
+  function swipeCard(direction) {
+
+    if (
+      cardElements.length === 0
+    ) {
+      return;
+    }
+
+
+    const topCard =
+      cardElements.shift();
+
+
+    const sceneId =
+      topCard.dataset.id;
+
+
+    const liked =
+      direction === "right";
+
+
+    swipeResults.push({
+      sceneId,
+      liked,
+    });
+
+
+    if (
+      direction === "left"
+    ) {
+
+      topCard.classList.add(
+        "swipe-left"
+      );
+
+    } else {
+
+      topCard.classList.add(
+        "swipe-right"
+      );
+
+    }
+
+
+    /*
+     * 뒤 카드 앞으로 당김
+     */
+    cardElements.forEach(
+      (card, index) => {
+
+        card.style.transform =
+          `scale(${1 - index * 0.03})
+           translateY(${index * 8}px)`;
+
+      }
+    );
+
+
+    updateProgress();
+
+
+    /*
+     * 모두 스와이프 완료
+     */
+    if (
+      cardElements.length === 0
+    ) {
+
+      likeButton.disabled =
+        true;
+
+      dislikeButton.disabled =
+        true;
+
+
+      setTimeout(
+        finishSwipe,
+        400
+      );
+
+    }
+  }
+
+
+
+  // =====================================================
+  // 진행 상태
+  // =====================================================
+
+  function updateProgress() {
+
+    const finished =
+      totalCards -
+      cardElements.length;
+
+
+    progress.textContent =
+      `${finished} / ${totalCards}`;
+
+  }
+
+
+
+  // =====================================================
+  // 모든 카드 완료
+  // =====================================================
+
+  async function finishSwipe() {
+
+    const success =
+      await sendPreferences();
+
+
+    if (!success) {
+
+      alert(
+        "취향 결과 처리에 실패했습니다."
+      );
+
+      return;
+    }
+
+
+    /*
+     * 시간과 위치는 이미 1단계에서 받았으므로
+     * 취향이 나오면 곧바로 코스를 만든다.
+     */
+    await requestCourse();
+  }
+
+
+
+  // =====================================================
+  // 스와이프 결과 서버 전송
+  // =====================================================
+
+  async function sendPreferences() {
+
+    try {
+
+      const response =
+        await fetch(
+          "/api/preferences",
+          {
+            method:
+              "POST",
+
+            headers: {
+              "Content-Type":
+                "application/json",
+            },
+
+            body:
+              JSON.stringify({
+                swipes:
+                  swipeResults,
+              }),
+          }
+        );
+
+
+      if (!response.ok) {
+
+        throw new Error(
+          `HTTP ${response.status}`
+        );
+
+      }
+
+
+      const data =
+        await response.json();
+
+
+      userPreferences =
+        data.preferences;
+
+
+      console.log(
+        "최종 취향 분석 결과:",
+        userPreferences
+      );
+
+
+      updatePreferenceSummary();
+
+
+      return true;
+
+
+    } catch (error) {
+
+      console.error(
+        "취향 분석 오류:",
+        error
+      );
+
+
+      return false;
+    }
+  }
+
+
+
+  // =====================================================
+  // 취향 결과 간단 표시
+  // =====================================================
+
+  const SCENE_LABEL = {
+    "indoor|staying":
+      "실내에서 머물기",
+
+    "indoor|moving":
+      "실내 둘러보기",
+
+    "outdoor|staying":
+      "야외에서 쉬기",
+
+    "outdoor|moving":
+      "바깥 걷기",
+  };
+
+
+  function toSceneLabel(combination) {
+
+    const key =
+      combination.environment +
+      "|" +
+      combination.activityStyle;
+
+
+    return (
+      SCENE_LABEL[key] ??
+      key
+    );
+  }
+
+
+  function updatePreferenceSummary() {
+
+    const summary =
+      document.getElementById(
+        "preference-summary"
+      );
+
+
+    if (!userPreferences) {
+      return;
+    }
+
+
+    const preferred =
+      userPreferences.preferred ??
+      [];
+
+
+    if (
+      preferred.length === 0
+    ) {
+
+      summary.textContent =
+        "취향이 뚜렷하지 않아 폭넓게 찾아볼게요";
+
+      return;
+    }
+
+
+    summary.textContent =
+      "좋아요 · " +
+      preferred
+        .map(toSceneLabel)
+        .join(" / ");
+  }
+
+
+
+  // =====================================================
+  // STEP 1 입력 화면 구성
+  // =====================================================
+
+  function renderMinuteOptions() {
+
+    minutesOptions.innerHTML = "";
+
+
+    MINUTE_OPTIONS.forEach(
+      (minutes) => {
+
+        const button =
+          document.createElement(
+            "button"
+          );
+
+
+        button.className =
+          "chip" +
+          (
+            minutes === selectedMinutes
+              ? " chip-selected"
+              : ""
+          );
+
+
+        button.textContent =
+          `${minutes}분`;
+
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            selectedMinutes =
+              minutes;
+
+            renderMinuteOptions();
+          }
+        );
+
+
+        minutesOptions.appendChild(
+          button
+        );
+      }
+    );
+  }
+
+
+  function renderPlaceOptions() {
+
+    startSelect.innerHTML = "";
+
+    endSelect.innerHTML = "";
+
+
+    /*
+     * 다음 일정 장소는
+     * 정하지 않을 수 있다.
+     */
+    const backOption =
+      document.createElement(
+        "option"
+      );
+
+    backOption.value = "";
+
+    backOption.textContent =
+      "출발한 자리로 복귀";
+
+    endSelect.appendChild(
+      backOption
+    );
+
+
+    PLACE_PRESETS.forEach(
+      (place, index) => {
+
+        const startOption =
+          document.createElement(
+            "option"
+          );
+
+        startOption.value =
+          String(index);
+
+        startOption.textContent =
+          place.name;
+
+        startSelect.appendChild(
+          startOption
+        );
+
+
+        const endOption =
+          document.createElement(
+            "option"
+          );
+
+        endOption.value =
+          String(index);
+
+        endOption.textContent =
+          place.name;
+
+        endSelect.appendChild(
+          endOption
+        );
+      }
+    );
+  }
+
+
+  function setDefaultDepartTime() {
+
+    const now = new Date();
+
+
+    departInput.value =
+      String(now.getHours()).padStart(2, "0") +
+      ":" +
+      String(now.getMinutes()).padStart(2, "0");
+  }
+
+
+  function getStartPoint() {
+
+    if (currentLocation) {
+      return currentLocation;
+    }
+
+
+    const preset =
+      PLACE_PRESETS[
+        Number(startSelect.value)
+      ];
+
+
+    return {
+      lat: preset.lat,
+      lng: preset.lng,
+    };
+  }
+
+
+  function getStartName() {
+
+    if (currentLocation) {
+      return "현재 위치";
+    }
+
+
+    return PLACE_PRESETS[
+      Number(startSelect.value)
+    ].name;
+  }
+
+
+  function getEndPoint() {
+
+    if (endSelect.value === "") {
+      return null;
+    }
+
+
+    const preset =
+      PLACE_PRESETS[
+        Number(endSelect.value)
+      ];
+
+
+    return {
+      lat: preset.lat,
+      lng: preset.lng,
+    };
+  }
+
+
+  function getEndName() {
+
+    if (endSelect.value === "") {
+      return getStartName();
+    }
+
+
+    return PLACE_PRESETS[
+      Number(endSelect.value)
+    ].name;
+  }
+
+
+  function useCurrentLocation() {
+
+    if (!navigator.geolocation) {
+
+      startNote.textContent =
+        "이 브라우저에서는 현재 위치를 쓸 수 없어요";
+
+      return;
+    }
+
+
+    startNote.textContent =
+      "현재 위치를 확인하는 중...";
+
+
+    navigator.geolocation.getCurrentPosition(
+
+      (position) => {
+
+        currentLocation = {
+          lat:
+            position.coords.latitude,
+
+          lng:
+            position.coords.longitude,
+        };
+
+
+        startNote.textContent =
+          "현재 위치를 사용합니다 " +
+          `(${currentLocation.lat.toFixed(4)}, ` +
+          `${currentLocation.lng.toFixed(4)})`;
+      },
+
+      (error) => {
+
+        console.error(
+          "위치 오류:",
+          error
+        );
+
+        currentLocation = null;
+
+        startNote.textContent =
+          "위치를 가져오지 못해 선택한 장소를 사용해요";
+      }
+    );
+  }
+
+
+  /*
+   * 1단계 버튼은 상황에 따라 하는 일이 다르다.
+   *
+   * 취향을 아직 모르면 스와이프 화면으로 넘어가고,
+   * 결과 화면에서 조건만 바꾸러 돌아온 경우에는
+   * 스와이프를 다시 시키지 않고 코스만 다시 만든다.
+   */
+  function updatePlanButton() {
+
+    courseButton.textContent =
+      userPreferences
+        ? "코스 다시 만들기"
+        : "취향 고르러 가기";
+  }
+
+
+  async function handlePlanSubmit() {
+
+    if (userPreferences) {
+
+      await requestCourse();
+
+      return;
+    }
+
+
+    showView("swipe-view");
+  }
+
+
+  /*
+   * 목록에서 장소를 고르면
+   * 브라우저 위치보다 그 선택을 우선한다.
+   */
+  startSelect.addEventListener(
+    "change",
+    () => {
+
+      currentLocation = null;
+
+      startNote.textContent = "";
+    }
+  );
+
+
+
+  // =====================================================
+  // 코스 요청
+  // =====================================================
+
+  async function requestCourse() {
+
+    /*
+     * 스와이프 직후에도 불리므로
+     * 버튼이 아니라 결과 화면에 진행 상태를 띄운다.
+     */
+    courseButton.disabled = true;
+
+    showCourseLoading();
+
+    showView("result-view");
+
+
+    try {
+
+      const response =
+        await fetch(
+          "/api/course",
+          {
+            method:
+              "POST",
+
+            headers: {
+              "Content-Type":
+                "application/json",
+            },
+
+            body:
+              JSON.stringify({
+                availableMinutes:
+                  selectedMinutes,
+
+                start:
+                  getStartPoint(),
+
+                end:
+                  getEndPoint(),
+
+                departAt:
+                  departInput.value ||
+                  null,
+
+                preferences:
+                  userPreferences,
+              }),
+          }
+        );
+
+
+      if (!response.ok) {
+
+        const errorData =
+          await response
+            .json()
+            .catch(() => ({}));
+
+        throw new Error(
+          errorData.error ??
+          `HTTP ${response.status}`
+        );
+
+      }
+
+
+      const data =
+        await response.json();
+
+
+      console.log(
+        "추천 결과:",
+        data
+      );
+
+
+      renderCourse(data);
+
+
+    } catch (error) {
+
+      console.error(
+        "코스 생성 오류:",
+        error
+      );
+
+      alert(
+        "코스를 만들지 못했습니다.\n" +
+        error.message
+      );
+
+      /*
+       * 실패하면 조건을 고칠 수 있게 되돌린다.
+       */
+      showView("plan-view");
+
+    } finally {
+
+      courseButton.disabled = false;
+
+      updatePlanButton();
+    }
+  }
+
+
+  /*
+   * 코스를 기다리는 동안 보여줄 화면
+   */
+  function showCourseLoading() {
+
+    document.getElementById(
+      "result-badge"
+    ).textContent =
+      "코스를 만드는 중";
+
+    document.getElementById(
+      "course-summary"
+    ).textContent =
+      "조건에 맞는 장소를 찾고 있어요.";
+
+    timeline.innerHTML = `
+      <div
+        class="
+          text-sm
+          text-textSub
+          bg-bgLayer
+          rounded-2xl
+          p-6
+          text-center
+        "
+      >
+        잠시만 기다려 주세요...
+      </div>
+    `;
+  }
+
+
+
+  // =====================================================
+  // 결과 렌더링
+  // =====================================================
+
+  function timelineNode(content, inner) {
+
+    return `
+      <div class="relative flex gap-4 mb-8">
+
+        <div
+          class="
+            w-8 h-8
+            rounded-full
+            flex items-center
+            justify-center
+            z-10
+            text-xs
+            font-bold
+            shrink-0
+            ${content.circleClass}
+          "
+        >
+          ${content.label}
+        </div>
+
+        <div class="flex-1 min-w-0">
+          ${inner}
+        </div>
+
+      </div>
+    `;
+  }
+
+
+  function renderCourse(result) {
+
+    const badge =
+      document.getElementById(
+        "result-badge"
+      );
+
+    const summary =
+      document.getElementById(
+        "course-summary"
+      );
+
+
+    const course =
+      result.course;
+
+
+    /*
+     * 만들 수 있는 코스가 없는 경우
+     */
+    if (!course) {
+
+      badge.textContent =
+        "코스 없음";
+
+      badge.className =
+        "inline-block bg-gray-100 text-gray-500 " +
+        "text-xs font-bold px-3 py-1 rounded-full mb-3";
+
+      summary.textContent =
+        `${result.availableMinutes}분 안에 ` +
+        `다녀올 수 있는 곳을 찾지 못했어요. ` +
+        `시간을 늘리거나 출발 위치를 바꿔보세요.`;
+
+      timeline.innerHTML = `
+        <div
+          class="
+            text-sm
+            text-textSub
+            bg-bgLayer
+            rounded-2xl
+            p-6
+            text-center
+          "
+        >
+          조건에 맞는 코스가 없습니다.
+        </div>
+      `;
+
+      return;
+    }
+
+
+    badge.textContent =
+      result.usedUncertain
+        ? "✨ 취향 밖까지 넓혀서 추천"
+        : "✨ 취향에 맞춘 추천";
+
+    badge.className =
+      "inline-block bg-brandLight text-brandDark " +
+      "text-xs font-bold px-3 py-1 rounded-full mb-3";
+
+
+    summary.textContent =
+      `이동 ${course.travelMinutes}분 · ` +
+      `체류 ${course.stayMinutes}분 · ` +
+      `여유 ${course.bufferMinutes}분` +
+      ` = 총 ${course.totalMinutes}분` +
+      ` (남는 시간 ${course.leftoverMinutes}분)`;
+
+
+    let html = `
+      <div class="timeline-line"></div>
+    `;
+
+
+    /* 출발 */
+    html += timelineNode(
+      {
+        label: "📍",
+
+        circleClass:
+          "bg-blue-500 text-white",
+      },
+      `
+        <div class="font-bold text-[15px]">
+          ${escapeHtml(getStartName())}
+        </div>
+
+        <div class="text-xs text-textSub mt-1">
+          ${escapeHtml(course.departAt)} 출발
+        </div>
+      `
+    );
+
+
+    /* 장소 */
+    course.places.forEach(
+      (place, index) => {
+
+        const stayLabel =
+          place.stayIsOfficial
+            ? "공식 소요시간"
+            : "기본 체류시간";
+
+
+        html += timelineNode(
+          {
+            label:
+              String(index + 1),
+
+            circleClass:
+              "bg-white border border-gray-200 text-textMain",
+          },
+          `
+            <div class="bg-bgLayer rounded-2xl p-4">
+
+              <div
+                class="
+                  flex items-start
+                  justify-between
+                  gap-2
+                "
+              >
+
+                <div class="min-w-0">
+
+                  <div
+                    class="font-bold text-[15px] truncate"
+                  >
+                    ${escapeHtml(place.title)}
+                  </div>
+
+                  <div
+                    class="text-xs text-textSub mt-1 truncate"
+                  >
+                    ${escapeHtml(place.category)}
+                  </div>
+
+                </div>
+
+                ${
+                  place.tier === "preferred"
+                    ? `<span
+                         class="
+                           shrink-0
+                           bg-brandLight
+                           text-brandDark
+                           text-[10px]
+                           font-bold
+                           px-2 py-1
+                           rounded-full
+                         "
+                       >취향</span>`
+                    : ""
+                }
+
+              </div>
+
+
+              <div
+                class="
+                  text-xs
+                  text-gray-500
+                  mt-3
+                  space-y-1
+                "
+              >
+
+                <div>
+                  🚶 이동 ${place.travelMinutes}분
+                  → ${escapeHtml(place.arriveAt)} 도착
+                </div>
+
+                <div>
+                  🕒 체류 ${place.stayMinutes}분
+                  → ${escapeHtml(place.leaveAt)} 출발
+                  <span class="text-gray-400">
+                    (${stayLabel})
+                  </span>
+                </div>
+
+                ${
+                  place.address
+                    ? `<div class="truncate">
+                         📌 ${escapeHtml(place.address)}
+                       </div>`
+                    : ""
+                }
+
+              </div>
+
+            </div>
+          `
+        );
+      }
+    );
+
+
+    /* 복귀 */
+    html += `
+      <div class="relative flex gap-4">
+
+        <div
+          class="
+            w-8 h-8
+            rounded-full
+            bg-brand
+            text-white
+            flex items-center
+            justify-center
+            z-10
+            shrink-0
+          "
+        >
+          ✓
+        </div>
+
+        <div class="flex-1">
+
+          <div class="font-bold text-[15px]">
+            ${escapeHtml(getEndName())}
+          </div>
+
+          <div class="text-xs text-textSub mt-1">
+            🚶 이동 ${course.returnMinutes}분
+            → ${escapeHtml(course.arriveEndAt)} 도착
+          </div>
+
+          <div class="text-xs text-brandDark font-bold mt-1">
+            다음 일정 ${BUFFER_MINUTES}분 전 도착
+          </div>
+
+        </div>
+
+      </div>
+    `;
+
+
+    timeline.innerHTML = html;
+  }
+
+
+
+  // =====================================================
+  // 화면 전환
+  // =====================================================
+
+  const VIEW_ORDER = [
+    "plan-view",
+    "swipe-view",
+    "result-view",
+  ];
+
+
+  function showView(targetId) {
+
+    const targetIndex =
+      VIEW_ORDER.indexOf(targetId);
+
+
+    VIEW_ORDER.forEach(
+      (id, index) => {
+
+        const view =
+          document.getElementById(id);
+
+
+        view.classList.remove(
+          "view-active",
+          "view-hidden-left",
+          "view-hidden-right"
+        );
+
+
+        if (index === targetIndex) {
+
+          view.classList.add(
+            "view-active"
+          );
+
+        } else if (index < targetIndex) {
+
+          view.classList.add(
+            "view-hidden-left"
+          );
+
+        } else {
+
+          view.classList.add(
+            "view-hidden-right"
+          );
+        }
+      }
+    );
+  }
+
+
+
+  // =====================================================
+  // 다시 시작
+  // =====================================================
+
+  async function restart() {
+
+    userPreferences =
+      null;
+
+    updatePlanButton();
+
+    showView("plan-view");
+
+
+    likeButton.disabled =
+      false;
+
+    dislikeButton.disabled =
+      false;
+
+
+    await loadSwipeCards();
+  }
+
+
+
+  // =====================================================
+  // HTML 문자열 보호
+  // =====================================================
+
+  function escapeHtml(value) {
+
+    if (
+      value === null ||
+      value === undefined
+    ) {
+      return "";
+    }
+
+
+    return String(value)
+      .replaceAll(
+        "&",
+        "&amp;"
+      )
+      .replaceAll(
+        "<",
+        "&lt;"
+      )
+      .replaceAll(
+        ">",
+        "&gt;"
+      )
+      .replaceAll(
+        '"',
+        "&quot;"
+      )
+      .replaceAll(
+        "'",
+        "&#039;"
+      );
+  }
+
+
+
+  // =====================================================
+  // 버튼 연결
+  // =====================================================
+
+  dislikeButton.addEventListener(
+    "click",
+    () => {
+      swipeCard("left");
+    }
+  );
+
+
+  likeButton.addEventListener(
+    "click",
+    () => {
+      swipeCard("right");
+    }
+  );
+
+
+  document
+    .getElementById(
+      "geolocation-button"
+    )
+    .addEventListener(
+      "click",
+      useCurrentLocation
+    );
+
+
+  courseButton.addEventListener(
+    "click",
+    handlePlanSubmit
+  );
+
+
+  document
+    .getElementById(
+      "back-button"
+    )
+    .addEventListener(
+      "click",
+      () => {
+
+        updatePlanButton();
+
+        showView("plan-view");
+      }
+    );
+
+
+  document
+    .getElementById(
+      "restart-button"
+    )
+    .addEventListener(
+      "click",
+      restart
+    );
+
+
+
+  // =====================================================
+  // 시작
+  // =====================================================
+
+  renderMinuteOptions();
+
+  renderPlaceOptions();
+
+  setDefaultDepartTime();
+
+  updatePlanButton();
+
+
+  /*
+   * 사용자가 1단계를 채우는 동안
+   * 스와이프 카드를 미리 받아둔다.
+   */
+  loadSwipeCards();
+
+</script>
+
+</body>
+</html>

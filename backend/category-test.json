@@ -1,0 +1,24 @@
+{
+  "title": "가나돈까스의집",
+  "contentTypeId": "39",
+  "categoryCode": {
+    "cat1": "A05",
+    "cat2": "A0502",
+    "cat3": "A05020100"
+  },
+  "categoryName": {
+    "cat1": "음식",
+    "cat2": "음식점",
+    "cat3": "한식"
+  },
+  "lclsCode": {
+    "level1": "FD",
+    "level2": "FD01",
+    "level3": "FD010100"
+  },
+  "lclsName": {
+    "level1": "음식",
+    "level2": "한식",
+    "level3": "관광식당"
+  }
+}

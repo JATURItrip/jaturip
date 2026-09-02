@@ -1,0 +1,2215 @@
+{
+  "cat": [
+    {
+      "contentTypeId": "39",
+      "cat1": "A05",
+      "cat2": "A0502",
+      "cat3": "A05020100",
+      "names": {
+        "cat1": "음식",
+        "cat2": "음식점",
+        "cat3": "한식"
+      }
+    },
+    {
+      "contentTypeId": "39",
+      "cat1": "A05",
+      "cat2": "A0502",
+      "cat3": "A05020400",
+      "names": {
+        "cat1": "음식",
+        "cat2": "음식점",
+        "cat3": "중식"
+      }
+    },
+    {
+      "contentTypeId": "38",
+      "cat1": "A04",
+      "cat2": "A0401",
+      "cat3": "A04010200",
+      "names": {
+        "cat1": "쇼핑",
+        "cat2": "쇼핑",
+        "cat3": "상설시장"
+      }
+    },
+    {
+      "contentTypeId": "38",
+      "cat1": "A04",
+      "cat2": "A0401",
+      "cat3": "A04010600",
+      "names": {
+        "cat1": "쇼핑",
+        "cat2": "쇼핑",
+        "cat3": "전문매장/상가"
+      }
+    },
+    {
+      "contentTypeId": "15",
+      "cat1": "A02",
+      "cat2": "A0207",
+      "cat3": "A02070200",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "축제",
+        "cat3": "일반축제"
+      }
+    },
+    {
+      "contentTypeId": "15",
+      "cat1": "A02",
+      "cat2": "A0208",
+      "cat3": "A02081300",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "공연/행사",
+        "cat3": "기타행사"
+      }
+    },
+    {
+      "contentTypeId": "39",
+      "cat1": "A05",
+      "cat2": "A0502",
+      "cat3": "A05020300",
+      "names": {
+        "cat1": "음식",
+        "cat2": "음식점",
+        "cat3": "일식"
+      }
+    },
+    {
+      "contentTypeId": "14",
+      "cat1": "A02",
+      "cat2": "A0206",
+      "cat3": "A02060100",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "문화시설",
+        "cat3": "박물관"
+      }
+    },
+    {
+      "contentTypeId": "38",
+      "cat1": "A04",
+      "cat2": "A0401",
+      "cat3": "A04011200",
+      "names": {
+        "cat1": "쇼핑",
+        "cat2": "쇼핑",
+        "cat3": "스키(보드) 렌탈샵"
+      }
+    },
+    {
+      "contentTypeId": "14",
+      "cat1": "A02",
+      "cat2": "A0206",
+      "cat3": "A02060500",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "문화시설",
+        "cat3": "미술관/화랑"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0202",
+      "cat3": "A02020700",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "휴양관광지",
+        "cat3": "공원"
+      }
+    },
+    {
+      "contentTypeId": "39",
+      "cat1": "A05",
+      "cat2": "A0502",
+      "cat3": "A05020900",
+      "names": {
+        "cat1": "음식",
+        "cat2": "음식점",
+        "cat3": "카페/전통찻집"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0203",
+      "cat3": "A02030400",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "체험관광지",
+        "cat3": "이색체험"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0202",
+      "cat3": "A02020200",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "휴양관광지",
+        "cat3": "관광단지"
+      }
+    },
+    {
+      "contentTypeId": "32",
+      "cat1": "B02",
+      "cat2": "B0201",
+      "cat3": "B02011100",
+      "names": {
+        "cat1": "숙박",
+        "cat2": "숙박시설",
+        "cat3": "게스트하우스"
+      }
+    },
+    {
+      "contentTypeId": "32",
+      "cat1": "B02",
+      "cat2": "B0201",
+      "cat3": "B02010100",
+      "names": {
+        "cat1": "숙박",
+        "cat2": "숙박시설",
+        "cat3": "관광호텔"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0302",
+      "cat3": "A03021700",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "육상 레포츠",
+        "cat3": "야영장,오토캠핑장"
+      }
+    },
+    {
+      "contentTypeId": "14",
+      "cat1": "A02",
+      "cat2": "A0206",
+      "cat3": "A02060700",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "문화시설",
+        "cat3": "문화원"
+      }
+    },
+    {
+      "contentTypeId": "14",
+      "cat1": "A02",
+      "cat2": "A0206",
+      "cat3": "A02060600",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "문화시설",
+        "cat3": "공연장"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0202",
+      "cat3": "A02020400",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "휴양관광지",
+        "cat3": "이색찜질방"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A01",
+      "cat2": "A0101",
+      "cat3": "A01010500",
+      "names": {
+        "cat1": "자연",
+        "cat2": "자연관광지",
+        "cat3": "자연생태관광지"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0203",
+      "cat3": "A02030600",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "체험관광지",
+        "cat3": "이색거리"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0302",
+      "cat3": "A03020200",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "육상 레포츠",
+        "cat3": "수련시설"
+      }
+    },
+    {
+      "contentTypeId": "38",
+      "cat1": "A04",
+      "cat2": "A0401",
+      "cat3": "A04010300",
+      "names": {
+        "cat1": "쇼핑",
+        "cat2": "쇼핑",
+        "cat3": "백화점"
+      }
+    },
+    {
+      "contentTypeId": "14",
+      "cat1": "A02",
+      "cat2": "A0206",
+      "cat3": "A02060900",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "문화시설",
+        "cat3": "도서관"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0201",
+      "cat3": "A02010700",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "역사관광지",
+        "cat3": "유적지/사적지"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0201",
+      "cat3": "A02010800",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "역사관광지",
+        "cat3": "사찰"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0302",
+      "cat3": "A03022700",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "육상 레포츠",
+        "cat3": "트래킹"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0201",
+      "cat3": "A02010300",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "역사관광지",
+        "cat3": "문"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0303",
+      "cat3": "A03030700",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "수상 레포츠",
+        "cat3": "수영"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0302",
+      "cat3": "A03020300",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "육상 레포츠",
+        "cat3": "경기장"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0204",
+      "cat3": "A02040800",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "산업관광지",
+        "cat3": "기타"
+      }
+    },
+    {
+      "contentTypeId": "32",
+      "cat1": "B02",
+      "cat2": "B0201",
+      "cat3": "B02011600",
+      "names": {
+        "cat1": "숙박",
+        "cat2": "숙박시설",
+        "cat3": "한옥"
+      }
+    },
+    {
+      "contentTypeId": "14",
+      "cat1": "A02",
+      "cat2": "A0206",
+      "cat3": "A02060300",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "문화시설",
+        "cat3": "전시관"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A01",
+      "cat2": "A0101",
+      "cat3": "A01010400",
+      "names": {
+        "cat1": "자연",
+        "cat2": "자연관광지",
+        "cat3": "산"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0201",
+      "cat3": "A02010400",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "역사관광지",
+        "cat3": "고택"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0205",
+      "cat3": "A02050600",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "건축/조형물",
+        "cat3": "유명건물"
+      }
+    },
+    {
+      "contentTypeId": "39",
+      "cat1": "A05",
+      "cat2": "A0502",
+      "cat3": "A05020700",
+      "names": {
+        "cat1": "음식",
+        "cat2": "음식점",
+        "cat3": "이색음식점"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0203",
+      "cat3": "A02030200",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "체험관광지",
+        "cat3": "전통체험"
+      }
+    },
+    {
+      "contentTypeId": "39",
+      "cat1": "A05",
+      "cat2": "A0502",
+      "cat3": "A05020200",
+      "names": {
+        "cat1": "음식",
+        "cat2": "음식점",
+        "cat3": "서양식"
+      }
+    },
+    {
+      "contentTypeId": "14",
+      "cat1": "A02",
+      "cat2": "A0206",
+      "cat3": "A02061000",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "문화시설",
+        "cat3": "대형서점"
+      }
+    },
+    {
+      "contentTypeId": "14",
+      "cat1": "A02",
+      "cat2": "A0206",
+      "cat3": "A02061100",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "문화시설",
+        "cat3": "문화전수시설"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A01",
+      "cat2": "A0101",
+      "cat3": "A01010700",
+      "names": {
+        "cat1": "자연",
+        "cat2": "자연관광지",
+        "cat3": "수목원"
+      }
+    },
+    {
+      "contentTypeId": "38",
+      "cat1": "A04",
+      "cat2": "A0401",
+      "cat3": "A04010700",
+      "names": {
+        "cat1": "쇼핑",
+        "cat2": "쇼핑",
+        "cat3": "공예/공방"
+      }
+    },
+    {
+      "contentTypeId": "14",
+      "cat1": "A02",
+      "cat2": "A0206",
+      "cat3": "A02060200",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "문화시설",
+        "cat3": "기념관"
+      }
+    },
+    {
+      "contentTypeId": "32",
+      "cat1": "B02",
+      "cat2": "B0201",
+      "cat3": "B02011200",
+      "names": {
+        "cat1": "숙박",
+        "cat2": "숙박시설",
+        "cat3": "홈스테이"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0302",
+      "cat3": "A03022200",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "육상 레포츠",
+        "cat3": "MTB"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0201",
+      "cat3": "A02010600",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "역사관광지",
+        "cat3": "민속마을"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0202",
+      "cat3": "A02020600",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "휴양관광지",
+        "cat3": "테마공원"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0303",
+      "cat3": "A03030400",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "수상 레포츠",
+        "cat3": "스노쿨링/스킨스쿠버다이빙"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0201",
+      "cat3": "A02010900",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "역사관광지",
+        "cat3": "종교성지"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0302",
+      "cat3": "A03021800",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "육상 레포츠",
+        "cat3": "암벽등반"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0201",
+      "cat3": "A02010100",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "역사관광지",
+        "cat3": "고궁"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0303",
+      "cat3": "A03030100",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "수상 레포츠",
+        "cat3": "윈드서핑/제트스키"
+      }
+    },
+    {
+      "contentTypeId": "32",
+      "cat1": "B02",
+      "cat2": "B0201",
+      "cat3": "B02010900",
+      "names": {
+        "cat1": "숙박",
+        "cat2": "숙박시설",
+        "cat3": "모텔"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0305",
+      "cat3": "A03050100",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "복합 레포츠",
+        "cat3": "복합 레포츠"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0302",
+      "cat3": "A03021300",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "육상 레포츠",
+        "cat3": "스케이트"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0302",
+      "cat3": "A03021600",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "육상 레포츠",
+        "cat3": "사격장"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0201",
+      "cat3": "A02010200",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "역사관광지",
+        "cat3": "성"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A01",
+      "cat2": "A0101",
+      "cat3": "A01010900",
+      "names": {
+        "cat1": "자연",
+        "cat2": "자연관광지",
+        "cat3": "계곡"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0205",
+      "cat3": "A02050200",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "건축/조형물",
+        "cat3": "기념탑/기념비/전망대"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0205",
+      "cat3": "A02050100",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "건축/조형물",
+        "cat3": "다리/대교"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0205",
+      "cat3": "A02050400",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "건축/조형물",
+        "cat3": "동상"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0203",
+      "cat3": "A02030100",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "체험관광지",
+        "cat3": "농.산.어촌 체험"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0201",
+      "cat3": "A02010500",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "역사관광지",
+        "cat3": "생가"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0204",
+      "cat3": "A02041000",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "산업관광지",
+        "cat3": "자동차"
+      }
+    },
+    {
+      "contentTypeId": "14",
+      "cat1": "A02",
+      "cat2": "A0206",
+      "cat3": "A02060400",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "문화시설",
+        "cat3": "컨벤션센터"
+      }
+    },
+    {
+      "contentTypeId": "15",
+      "cat1": "A02",
+      "cat2": "A0208",
+      "cat3": "A02080100",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "공연/행사",
+        "cat3": "전통공연"
+      }
+    },
+    {
+      "contentTypeId": "32",
+      "cat1": "B02",
+      "cat2": "B0201",
+      "cat3": "B02010600",
+      "names": {
+        "cat1": "숙박",
+        "cat2": "숙박시설",
+        "cat3": "유스호스텔"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0201",
+      "cat3": "A02011000",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "역사관광지",
+        "cat3": "안보관광"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A01",
+      "cat2": "A0102",
+      "cat3": "A01020200",
+      "names": {
+        "cat1": "자연",
+        "cat2": "관광자원",
+        "cat3": "기암괴석"
+      }
+    },
+    {
+      "contentTypeId": "14",
+      "cat1": "A02",
+      "cat2": "A0206",
+      "cat3": "A02061400",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "문화시설",
+        "cat3": "학교"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0302",
+      "cat3": "A03021000",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "육상 레포츠",
+        "cat3": "카지노"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0303",
+      "cat3": "A03030200",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "수상 레포츠",
+        "cat3": "카약/카누"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0302",
+      "cat3": "A03020500",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "육상 레포츠",
+        "cat3": "자전거하이킹"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A01",
+      "cat2": "A0101",
+      "cat3": "A01011800",
+      "names": {
+        "cat1": "자연",
+        "cat2": "자연관광지",
+        "cat3": "강"
+      }
+    },
+    {
+      "contentTypeId": "32",
+      "cat1": "B02",
+      "cat2": "B0201",
+      "cat3": "B02011300",
+      "names": {
+        "cat1": "숙박",
+        "cat2": "숙박시설",
+        "cat3": "서비스드레지던스"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0202",
+      "cat3": "A02020300",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "휴양관광지",
+        "cat3": "온천/욕장/스파"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0202",
+      "cat3": "A02020800",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "휴양관광지",
+        "cat3": "유람선/잠수함관광"
+      }
+    },
+    {
+      "contentTypeId": "14",
+      "cat1": "A02",
+      "cat2": "A0206",
+      "cat3": "A02060800",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "문화시설",
+        "cat3": "외국문화원"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0302",
+      "cat3": "A03020700",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "육상 레포츠",
+        "cat3": "골프"
+      }
+    },
+    {
+      "contentTypeId": "15",
+      "cat1": "A02",
+      "cat2": "A0208",
+      "cat3": "A02080800",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "공연/행사",
+        "cat3": "무용"
+      }
+    },
+    {
+      "contentTypeId": "15",
+      "cat1": "A02",
+      "cat2": "A0208",
+      "cat3": "A02080500",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "공연/행사",
+        "cat3": "전시회"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0204",
+      "cat3": "A02040600",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "산업관광지",
+        "cat3": "식음료"
+      }
+    },
+    {
+      "contentTypeId": "28",
+      "cat1": "A03",
+      "cat2": "A0301",
+      "cat3": "A03010200",
+      "names": {
+        "cat1": "레포츠",
+        "cat2": "레포츠소개",
+        "cat3": "수상레포츠"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A02",
+      "cat2": "A0202",
+      "cat3": "A02020500",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "휴양관광지",
+        "cat3": "헬스투어"
+      }
+    },
+    {
+      "contentTypeId": "12",
+      "cat1": "A01",
+      "cat2": "A0102",
+      "cat3": "A01020100",
+      "names": {
+        "cat1": "자연",
+        "cat2": "관광자원",
+        "cat3": "희귀동.식물"
+      }
+    },
+    {
+      "contentTypeId": "15",
+      "cat1": "A02",
+      "cat2": "A0208",
+      "cat3": "A02081000",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "공연/행사",
+        "cat3": "대중콘서트"
+      }
+    },
+    {
+      "contentTypeId": "15",
+      "cat1": "A02",
+      "cat2": "A0208",
+      "cat3": "A02080600",
+      "names": {
+        "cat1": "인문(문화/예술/역사)",
+        "cat2": "공연/행사",
+        "cat3": "박람회"
+      }
+    }
+  ],
+  "lcls": [
+    {
+      "level1": "FD",
+      "level2": "FD01",
+      "level3": "FD010100",
+      "names": {
+        "level1": "음식",
+        "level2": "한식",
+        "level3": "관광식당"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD02",
+      "level3": "FD020100",
+      "names": {
+        "level1": "음식",
+        "level2": "외국식",
+        "level3": "중식"
+      }
+    },
+    {
+      "level1": "SH",
+      "level2": "SH06",
+      "level3": "SH060200",
+      "names": {
+        "level1": "쇼핑",
+        "level2": "시장",
+        "level3": "상설시장"
+      }
+    },
+    {
+      "level1": "SH",
+      "level2": "SH05",
+      "level3": "SH050200",
+      "names": {
+        "level1": "쇼핑",
+        "level2": "전문매장/상가",
+        "level3": "전문상가"
+      }
+    },
+    {
+      "level1": "EV",
+      "level2": "EV01",
+      "level3": "EV010600",
+      "names": {
+        "level1": "축제/공연/행사",
+        "level2": "축제",
+        "level3": "기타축제"
+      }
+    },
+    {
+      "level1": "EV",
+      "level2": "EV03",
+      "level3": "EV030400",
+      "names": {
+        "level1": "축제/공연/행사",
+        "level2": "행사",
+        "level3": "기타행사"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD02",
+      "level3": "FD020200",
+      "names": {
+        "level1": "음식",
+        "level2": "외국식",
+        "level3": "일식"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE07",
+      "level3": "VE070100",
+      "names": {
+        "level1": "문화관광",
+        "level2": "전시시설",
+        "level3": "박물관"
+      }
+    },
+    {
+      "level1": "SH",
+      "level2": "SH07",
+      "level3": "SH070100",
+      "names": {
+        "level1": "쇼핑",
+        "level2": "기타쇼핑시설",
+        "level3": "기타쇼핑시설"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE07",
+      "level3": "VE070600",
+      "names": {
+        "level1": "문화관광",
+        "level2": "전시시설",
+        "level3": "미술관/화랑"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE03",
+      "level3": "VE030400",
+      "names": {
+        "level1": "문화관광",
+        "level2": "도시공원",
+        "level3": "근린공원"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD03",
+      "level3": "FD030400",
+      "names": {
+        "level1": "음식",
+        "level2": "간이음식",
+        "level3": "김밥 분식"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD05",
+      "level3": "FD050100",
+      "names": {
+        "level1": "음식",
+        "level2": "카페/ 찻집",
+        "level3": "카페"
+      }
+    },
+    {
+      "level1": "EX",
+      "level2": "EX07",
+      "level3": "EX070200",
+      "names": {
+        "level1": "체험관광",
+        "level2": "기타체험",
+        "level3": "기타체험관광"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE05",
+      "level3": "VE050100",
+      "names": {
+        "level1": "문화관광",
+        "level2": "복합관광시설",
+        "level3": "관광단지"
+      }
+    },
+    {
+      "level1": "EV",
+      "level2": "EV01",
+      "level3": "EV010200",
+      "names": {
+        "level1": "축제/공연/행사",
+        "level2": "축제",
+        "level3": "문화예술축제"
+      }
+    },
+    {
+      "level1": "AC",
+      "level2": "AC06",
+      "level3": "AC060200",
+      "names": {
+        "level1": "숙박",
+        "level2": "호스텔",
+        "level3": "게스트하우스"
+      }
+    },
+    {
+      "level1": "AC",
+      "level2": "AC01",
+      "level3": "AC010100",
+      "names": {
+        "level1": "숙박",
+        "level2": "호텔",
+        "level3": "호텔"
+      }
+    },
+    {
+      "level1": "AC",
+      "level2": "AC05",
+      "level3": "AC050100",
+      "names": {
+        "level1": "숙박",
+        "level2": "캠핑",
+        "level3": "일반야영장"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE09",
+      "level3": "VE090100",
+      "names": {
+        "level1": "문화관광",
+        "level2": "교육시설",
+        "level3": "한국문화원"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE06",
+      "level3": "VE060100",
+      "names": {
+        "level1": "문화관광",
+        "level2": "공연시설",
+        "level3": "공연장"
+      }
+    },
+    {
+      "level1": "EX",
+      "level2": "EX05",
+      "level3": "EX050200",
+      "names": {
+        "level1": "체험관광",
+        "level2": "웰니스관광",
+        "level3": "찜질방"
+      }
+    },
+    {
+      "level1": "NA",
+      "level2": "NA03",
+      "level3": "NA030400",
+      "names": {
+        "level1": "자연관광",
+        "level2": "자연생태",
+        "level3": "생태습지"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE04",
+      "level3": "VE040100",
+      "names": {
+        "level1": "문화관광",
+        "level2": "도시.지역문화관광",
+        "level3": "골목길, 문화거리"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE10",
+      "level3": "VE100200",
+      "names": {
+        "level1": "문화관광",
+        "level2": "레저스포츠시설",
+        "level3": "스포츠센터, 수련시설"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE03",
+      "level3": "VE030100",
+      "names": {
+        "level1": "문화관광",
+        "level2": "도시공원",
+        "level3": "시민공원"
+      }
+    },
+    {
+      "level1": "SH",
+      "level2": "SH01",
+      "level3": "SH010100",
+      "names": {
+        "level1": "쇼핑",
+        "level2": "백화점",
+        "level3": "백화점"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE09",
+      "level3": "VE090300",
+      "names": {
+        "level1": "문화관광",
+        "level2": "교육시설",
+        "level3": "도서관"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS01",
+      "level3": "HS011200",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유적지",
+        "level3": "기타역사유적지"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS03",
+      "level3": "HS030100",
+      "names": {
+        "level1": "역사관광",
+        "level2": "종교성지",
+        "level3": "불교"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS01",
+      "level3": "LS011900",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "육상레저스포츠",
+        "level3": "기타육상레저스포츠"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS01",
+      "level3": "HS010300",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유적지",
+        "level3": "문"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE03",
+      "level3": "VE030500",
+      "names": {
+        "level1": "문화관광",
+        "level2": "도시공원",
+        "level3": "주제공원"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS02",
+      "level3": "LS020700",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "수상레저스포츠",
+        "level3": "수영"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE10",
+      "level3": "VE100100",
+      "names": {
+        "level1": "문화관광",
+        "level2": "레저스포츠시설",
+        "level3": "스포츠경기장"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS01",
+      "level3": "HS011000",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유적지",
+        "level3": "선사유적지"
+      }
+    },
+    {
+      "level1": "EX",
+      "level2": "EX06",
+      "level3": "EX061000",
+      "names": {
+        "level1": "체험관광",
+        "level2": "산업관광",
+        "level3": "기타산업관광지"
+      }
+    },
+    {
+      "level1": "AC",
+      "level2": "AC03",
+      "level3": "AC030200",
+      "names": {
+        "level1": "숙박",
+        "level2": "펜션/민박",
+        "level3": "한옥스테이"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE07",
+      "level3": "VE070300",
+      "names": {
+        "level1": "문화관광",
+        "level2": "전시시설",
+        "level3": "전시관"
+      }
+    },
+    {
+      "level1": "NA",
+      "level2": "NA05",
+      "level3": "NA050100",
+      "names": {
+        "level1": "자연관광",
+        "level2": "기타자연관광",
+        "level3": "기타자연관광"
+      }
+    },
+    {
+      "level1": "NA",
+      "level2": "NA01",
+      "level3": "NA010100",
+      "names": {
+        "level1": "자연관광",
+        "level2": "자연경관(산)",
+        "level3": "산, 고개, 오름, 봉우리"
+      }
+    },
+    {
+      "level1": "NA",
+      "level2": "NA04",
+      "level3": "NA040500",
+      "names": {
+        "level1": "자연관광",
+        "level2": "자연공원",
+        "level3": "생태관광지"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS01",
+      "level3": "HS010400",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유적지",
+        "level3": "고택"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE12",
+      "level3": "VE120300",
+      "names": {
+        "level1": "문화관광",
+        "level2": "기타문화관광지",
+        "level3": "기타문화시설"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE01",
+      "level3": "VE010200",
+      "names": {
+        "level1": "문화관광",
+        "level2": "랜드마크관광",
+        "level3": "타워 / 전망대"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD02",
+      "level3": "FD020500",
+      "names": {
+        "level1": "음식",
+        "level2": "외국식",
+        "level3": "퓨전음식"
+      }
+    },
+    {
+      "level1": "EX",
+      "level2": "EX01",
+      "level3": "EX010100",
+      "names": {
+        "level1": "체험관광",
+        "level2": "전통체험",
+        "level3": "전통문화체험"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD02",
+      "level3": "FD020300",
+      "names": {
+        "level1": "음식",
+        "level2": "외국식",
+        "level3": "서양식"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE12",
+      "level3": "VE120100",
+      "names": {
+        "level1": "문화관광",
+        "level2": "기타문화관광지",
+        "level3": "서점"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD03",
+      "level3": "FD030100",
+      "names": {
+        "level1": "음식",
+        "level2": "간이음식",
+        "level3": "제과"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE09",
+      "level3": "VE090400",
+      "names": {
+        "level1": "문화관광",
+        "level2": "교육시설",
+        "level3": "문화전수시설"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS01",
+      "level3": "HS010800",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유적지",
+        "level3": "고분, 능"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE07",
+      "level3": "VE070500",
+      "names": {
+        "level1": "문화관광",
+        "level2": "전시시설",
+        "level3": "과학관"
+      }
+    },
+    {
+      "level1": "NA",
+      "level2": "NA04",
+      "level3": "NA040700",
+      "names": {
+        "level1": "자연관광",
+        "level2": "자연공원",
+        "level3": "수목원ㆍ정원"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE01",
+      "level3": "VE010100",
+      "names": {
+        "level1": "문화관광",
+        "level2": "랜드마크관광",
+        "level3": "건물"
+      }
+    },
+    {
+      "level1": "SH",
+      "level2": "SH05",
+      "level3": "SH050100",
+      "names": {
+        "level1": "쇼핑",
+        "level2": "전문매장/상가",
+        "level3": "공방/공예품점"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE07",
+      "level3": "VE070200",
+      "names": {
+        "level1": "문화관광",
+        "level2": "전시시설",
+        "level3": "기념관"
+      }
+    },
+    {
+      "level1": "AC",
+      "level2": "AC03",
+      "level3": "AC030400",
+      "names": {
+        "level1": "숙박",
+        "level2": "펜션/민박",
+        "level3": "홈스테이"
+      }
+    },
+    {
+      "level1": "EX",
+      "level2": "EX02",
+      "level3": "EX020400",
+      "names": {
+        "level1": "체험관광",
+        "level2": "공예체험",
+        "level3": "기타공예체험"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD02",
+      "level3": "FD020400",
+      "names": {
+        "level1": "음식",
+        "level2": "외국식",
+        "level3": "기타외국식"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS01",
+      "level3": "LS011600",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "육상레저스포츠",
+        "level3": "MTB"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS01",
+      "level3": "HS010600",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유적지",
+        "level3": "민속마을"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE03",
+      "level3": "VE030200",
+      "names": {
+        "level1": "문화관광",
+        "level2": "도시공원",
+        "level3": "소공원"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE02",
+      "level3": "VE020100",
+      "names": {
+        "level1": "문화관광",
+        "level2": "테마공원",
+        "level3": "테마파크"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS02",
+      "level3": "LS020400",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "수상레저스포츠",
+        "level3": "스노쿨링/스킨스쿠버다이빙"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS03",
+      "level3": "HS030200",
+      "names": {
+        "level1": "역사관광",
+        "level2": "종교성지",
+        "level3": "기독교"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE03",
+      "level3": "VE030300",
+      "names": {
+        "level1": "문화관광",
+        "level2": "도시공원",
+        "level3": "어린이공원"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS01",
+      "level3": "LS011300",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "육상레저스포츠",
+        "level3": "암벽등반"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS01",
+      "level3": "HS010900",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유적지",
+        "level3": "사당"
+      }
+    },
+    {
+      "level1": "EV",
+      "level2": "EV01",
+      "level3": "EV010400",
+      "names": {
+        "level1": "축제/공연/행사",
+        "level2": "축제",
+        "level3": "전통역사축제"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS01",
+      "level3": "HS010100",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유적지",
+        "level3": "고궁"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS02",
+      "level3": "LS020100",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "수상레저스포츠",
+        "level3": "윈드서핑/제트스키"
+      }
+    },
+    {
+      "level1": "AC",
+      "level2": "AC04",
+      "level3": "AC040100",
+      "names": {
+        "level1": "숙박",
+        "level2": "모텔",
+        "level3": "모텔"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS04",
+      "level3": "LS040100",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "복합레저스포츠",
+        "level3": "복합레저스포츠"
+      }
+    },
+    {
+      "level1": "SH",
+      "level2": "SH02",
+      "level3": "SH020100",
+      "names": {
+        "level1": "쇼핑",
+        "level2": "쇼핑몰",
+        "level3": "복합쇼핑몰"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS01",
+      "level3": "LS010900",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "육상레저스포츠",
+        "level3": "스케이트"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE02",
+      "level3": "VE020400",
+      "names": {
+        "level1": "문화관광",
+        "level2": "테마공원",
+        "level3": "수족관 / 아쿠라리움"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD03",
+      "level3": "FD030200",
+      "names": {
+        "level1": "음식",
+        "level2": "간이음식",
+        "level3": "피자, 햄버거, 샌드위치 및 유사음식"
+      }
+    },
+    {
+      "level1": "SH",
+      "level2": "SH02",
+      "level3": "SH020200",
+      "names": {
+        "level1": "쇼핑",
+        "level2": "쇼핑몰",
+        "level3": "아웃렛"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD03",
+      "level3": "FD030500",
+      "names": {
+        "level1": "음식",
+        "level2": "간이음식",
+        "level3": "이동음식"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD05",
+      "level3": "FD050200",
+      "names": {
+        "level1": "음식",
+        "level2": "카페/ 찻집",
+        "level3": "찻집"
+      }
+    },
+    {
+      "level1": "NA",
+      "level2": "NA01",
+      "level3": "NA010200",
+      "names": {
+        "level1": "자연관광",
+        "level2": "자연경관(산)",
+        "level3": "숲"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS01",
+      "level3": "LS011200",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "육상레저스포츠",
+        "level3": "사격장"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS01",
+      "level3": "HS010200",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유적지",
+        "level3": "성ㆍ산성ㆍ성곽"
+      }
+    },
+    {
+      "level1": "NA",
+      "level2": "NA01",
+      "level3": "NA010400",
+      "names": {
+        "level1": "자연관광",
+        "level2": "자연경관(산)",
+        "level3": "계곡"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS02",
+      "level3": "HS020100",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유물",
+        "level3": "탑ㆍ비석ㆍ기념탑"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE01",
+      "level3": "VE010300",
+      "names": {
+        "level1": "문화관광",
+        "level2": "랜드마크관광",
+        "level3": "다리 / 대교"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE01",
+      "level3": "VE010500",
+      "names": {
+        "level1": "문화관광",
+        "level2": "랜드마크관광",
+        "level3": "동상"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS01",
+      "level3": "HS011100",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유적지",
+        "level3": "근대건축물"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS01",
+      "level3": "HS010700",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유적지",
+        "level3": "사적지"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE04",
+      "level3": "VE040200",
+      "names": {
+        "level1": "문화관광",
+        "level2": "도시.지역문화관광",
+        "level3": "마을관광지"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD01",
+      "level3": "FD010200",
+      "names": {
+        "level1": "음식",
+        "level2": "한식",
+        "level3": "모범음식점"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS03",
+      "level3": "HS030400",
+      "names": {
+        "level1": "역사관광",
+        "level2": "종교성지",
+        "level3": "기타 종교성지"
+      }
+    },
+    {
+      "level1": "AC",
+      "level2": "AC05",
+      "level3": "AC050400",
+      "names": {
+        "level1": "숙박",
+        "level2": "캠핑",
+        "level3": "글램핑장"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS01",
+      "level3": "HS010500",
+      "names": {
+        "level1": "역사관광",
+        "level2": "역사유적지",
+        "level3": "생가"
+      }
+    },
+    {
+      "level1": "EX",
+      "level2": "EX06",
+      "level3": "EX060600",
+      "names": {
+        "level1": "체험관광",
+        "level2": "산업관광",
+        "level3": "자동차/조선/철강 등"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE07",
+      "level3": "VE070400",
+      "names": {
+        "level1": "문화관광",
+        "level2": "전시시설",
+        "level3": "컨벤션센터"
+      }
+    },
+    {
+      "level1": "EV",
+      "level2": "EV02",
+      "level3": "EV020100",
+      "names": {
+        "level1": "축제/공연/행사",
+        "level2": "공연",
+        "level3": "전통공연"
+      }
+    },
+    {
+      "level1": "AC",
+      "level2": "AC06",
+      "level3": "AC060100",
+      "names": {
+        "level1": "숙박",
+        "level2": "호스텔",
+        "level3": "유스호스텔"
+      }
+    },
+    {
+      "level1": "HS",
+      "level2": "HS04",
+      "level3": "HS040400",
+      "names": {
+        "level1": "역사관광",
+        "level2": "안보관광지",
+        "level3": "기타안보관광지"
+      }
+    },
+    {
+      "level1": "NA",
+      "level2": "NA03",
+      "level3": "NA030300",
+      "names": {
+        "level1": "자연관광",
+        "level2": "자연생태",
+        "level3": "기암괴석"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE09",
+      "level3": "VE090600",
+      "names": {
+        "level1": "문화관광",
+        "level2": "교육시설",
+        "level3": "학교"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE12",
+      "level3": "VE120200",
+      "names": {
+        "level1": "문화관광",
+        "level2": "기타문화관광지",
+        "level3": "카지노"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS02",
+      "level3": "LS020200",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "수상레저스포츠",
+        "level3": "카약/카누"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS01",
+      "level3": "LS010200",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "육상레저스포츠",
+        "level3": "자전거하이킹"
+      }
+    },
+    {
+      "level1": "NA",
+      "level2": "NA02",
+      "level3": "NA020100",
+      "names": {
+        "level1": "자연관광",
+        "level2": "자연경관(하천‧해양)",
+        "level3": "강"
+      }
+    },
+    {
+      "level1": "EV",
+      "level2": "EV01",
+      "level3": "EV010500",
+      "names": {
+        "level1": "축제/공연/행사",
+        "level2": "축제",
+        "level3": "생태자연축제"
+      }
+    },
+    {
+      "level1": "AC",
+      "level2": "AC02",
+      "level3": "AC020200",
+      "names": {
+        "level1": "숙박",
+        "level2": "콘도미니엄",
+        "level3": "레지던스"
+      }
+    },
+    {
+      "level1": "EX",
+      "level2": "EX05",
+      "level3": "EX050100",
+      "names": {
+        "level1": "체험관광",
+        "level2": "웰니스관광",
+        "level3": "온천 / 사우나 / 스파"
+      }
+    },
+    {
+      "level1": "EX",
+      "level2": "EX07",
+      "level3": "EX070100",
+      "names": {
+        "level1": "체험관광",
+        "level2": "기타체험",
+        "level3": "유람선/잠수함관광"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE09",
+      "level3": "VE090200",
+      "names": {
+        "level1": "문화관광",
+        "level2": "교육시설",
+        "level3": "외국문화원"
+      }
+    },
+    {
+      "level1": "FD",
+      "level2": "FD03",
+      "level3": "FD030600",
+      "names": {
+        "level1": "음식",
+        "level2": "간이음식",
+        "level3": "기타간이음식"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS01",
+      "level3": "LS010400",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "육상레저스포츠",
+        "level3": "골프"
+      }
+    },
+    {
+      "level1": "EV",
+      "level2": "EV02",
+      "level3": "EV020500",
+      "names": {
+        "level1": "축제/공연/행사",
+        "level2": "공연",
+        "level3": "무용"
+      }
+    },
+    {
+      "level1": "EV",
+      "level2": "EV03",
+      "level3": "EV030100",
+      "names": {
+        "level1": "축제/공연/행사",
+        "level2": "행사",
+        "level3": "전시회"
+      }
+    },
+    {
+      "level1": "EX",
+      "level2": "EX06",
+      "level3": "EX060800",
+      "names": {
+        "level1": "체험관광",
+        "level2": "산업관광",
+        "level3": "화장품/주류/먹거리"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE02",
+      "level3": "VE020200",
+      "names": {
+        "level1": "문화관광",
+        "level2": "테마공원",
+        "level3": "워터파크"
+      }
+    },
+    {
+      "level1": "LS",
+      "level2": "LS02",
+      "level3": "LS021400",
+      "names": {
+        "level1": "레저스포츠",
+        "level2": "수상레저스포츠",
+        "level3": "기타수상레저스포츠"
+      }
+    },
+    {
+      "level1": "VE",
+      "level2": "VE02",
+      "level3": "VE020300",
+      "names": {
+        "level1": "문화관광",
+        "level2": "테마공원",
+        "level3": "동물원"
+      }
+    },
+    {
+      "level1": "EX",
+      "level2": "EX05",
+      "level3": "EX050400",
+      "names": {
+        "level1": "체험관광",
+        "level2": "웰니스관광",
+        "level3": "힐링명상"
+      }
+    },
+    {
+      "level1": "NA",
+      "level2": "NA03",
+      "level3": "NA030200",
+      "names": {
+        "level1": "자연관광",
+        "level2": "자연생태",
+        "level3": "희귀동.식물"
+      }
+    },
+    {
+      "level1": "EV",
+      "level2": "EV02",
+      "level3": "EV020700",
+      "names": {
+        "level1": "축제/공연/행사",
+        "level2": "공연",
+        "level3": "대중콘서트"
+      }
+    },
+    {
+      "level1": "EV",
+      "level2": "EV03",
+      "level3": "EV030200",
+      "names": {
+        "level1": "축제/공연/행사",
+        "level2": "행사",
+        "level3": "박람회"
+      }
+    }
+  ]
+}
